@@ -1,0 +1,72 @@
+{
+  "moduleNo": "05",
+  "moduleTitleEn": "Module 5 — Tax on Agricultural Income",
+  "moduleTitleMr": "मॉड्यूल 5 — शेती उत्पन्नावरील कर",
+  "generatedAt": "2026-09-21T04:48:11.368Z",
+  "questions": [
+    {
+      "position": 1,
+      "promptEn": "What is the government’s official reason for farm income not being taxable in India?",
+      "promptMr": "भारतात शेती उत्पन्न करपात्र नसण्याचे सरकारचे अधिकृत कारण काय आहे?",
+      "optionsEn": [
+        "Most farmers have an income below the taxable limit.",
+        "Farming involves too many weather-related risks.",
+        "Agricultural products are sold directly to local consumers.",
+        "Farmers already pay heavy taxes on seeds and fertilizers."
+      ],
+      "optionsMr": [
+        "बहुतेक शेतकऱ्यांचे उत्पन्न करपात्र मर्यादेपेक्षा कमी असते.",
+        "शेतीमध्ये हवामानाशी संबंधित खूप जास्त जोखीम असते.",
+        "शेतीमालाची विक्री थेट स्थानिक ग्राहकांना केली जाते.",
+        "शेतकरी आधीच बियाणे आणि खतांवर मोठा कर भरतात."
+      ],
+      "correctIndex": 0,
+      "explanationEn": "The government officially states that farm income is tax-free because the average earnings of farmer families fall below the taxable threshold.",
+      "explanationMr": "सरकारचे अधिकृत म्हणणे आहे की शेतीतून मिळणारे उत्पन्न करमुक्त आहे कारण शेतकरी कुटुंबांची सरासरी कमाई करपात्र मर्यादेपेक्षा कमी असते.",
+      "source": "ai"
+    },
+    {
+      "position": 2,
+      "promptEn": "What was the daily net profit of the farmer in the soybean example, and how did it differ from the labourer’s wage?",
+      "promptMr": "सोयाबीन उदाहरणातील शेतकऱ्याचा प्रतिदिन निव्वळ नफा किती होता, आणि तो मजुराच्या मजुरीशी कसा वेगळा होता?",
+      "optionsEn": [
+        "₹35.56 per day, which was much lower than the labourer's wage of ₹350.",
+        "₹350 per day, which was equal to the labourer's wage.",
+        "₹3,200 per day, which was higher than the labourer's wage.",
+        "₹300 per day, which was slightly lower than the labourer's wage."
+      ],
+      "optionsMr": [
+        "दररोज ३५.५६ रुपये, जो मजुराच्या ३५0 रुपयांच्या मजुरीपेक्षा खूपच कमी होता.",
+        "दररोज ३५0 रुपये, जो मजुराच्या मजुरीएवढाच होता.",
+        "दररोज ३,२०० रुपये, जो मजुराच्या मजुरीपेक्षा जास्त होता.",
+        "दररोज ३०० रुपये, जो मजुराच्या मजुरीपेक्षा थोडा कमी होता."
+      ],
+      "correctIndex": 0,
+      "explanationEn": "The farmer's daily profit was about ₹35.56, which is roughly one-tenth of the ₹350 daily wage paid to labourers.",
+      "explanationMr": "शेतकऱ्याचा प्रतिदिन नफा सुमारे ३५.५६ रुपये होता, जो मजुरांना मिळणाऱ्या ३५0 रुपये दैनंदिन मजुरीच्या साधारणपणे दहावा भाग आहे.",
+      "source": "ai"
+    },
+    {
+      "position": 3,
+      "promptEn": "Why is keeping farm accounts important even when no tax applies?",
+      "promptMr": "कर लागू नसतानाही शेतीचा हिशेब ठेवणे का महत्त्वाचे आहे?",
+      "optionsEn": [
+        "It helps farmers know their true daily profit and demand fair prices.",
+        "It prevents the government from imposing new hidden agricultural taxes.",
+        "It allows farmers to qualify for higher bank loans and subsidies.",
+        "It ensures accurate measurement of total farm turnover rather than profit."
+      ],
+      "optionsMr": [
+        "यामुळे शेतकऱ्यांना त्यांचा दररोजचा खरा नफा समजतो आणि योग्य भाव मागता येतो.",
+        "यामुळे सरकारला कोणतेही नवे लपलेले शेती कर लावण्यापासून रोकता येते.",
+        "यामुळे शेतकऱ्यांना बँकेकडून जास्त कर्ज आणि अनुदान मिळण्यास मदत होते.",
+        "यामुळे नफ्यापेक्षा शेतीच्या एकूण उलाढालीचे अचूक मोजमाप सुनिश्चित होते."
+      ],
+      "correctIndex": 0,
+      "explanationEn": "Keeping accounts lets farmers see their actual earnings and use that information to demand fair prices.",
+      "explanationMr": "हिशेब ठेवल्यामुळे शेतकऱ्यांना आपली खरी कमाई किती आहे ते समजते आणि त्या माहितीचा वापर करून ते मालाला योग्य भाव मागू शकतात.",
+      "source": "ai"
+    }
+  ],
+  "errors": []
+}

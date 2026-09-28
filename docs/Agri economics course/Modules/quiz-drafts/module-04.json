@@ -1,0 +1,72 @@
+{
+  "moduleNo": "04",
+  "moduleTitleEn": "Module 4 — Benchmarking for Better Farming",
+  "moduleTitleMr": "मॉड्यूल 4 — चांगल्या शेतीसाठी बेंचमार्किंग",
+  "generatedAt": "2026-09-21T04:47:57.535Z",
+  "questions": [
+    {
+      "position": 1,
+      "promptEn": "What is benchmarking? Explain in your own words.",
+      "promptMr": "बेंचमार्किंग म्हणजे काय, स्वतःच्या शब्दांत स्पष्ट करा.",
+      "optionsEn": [
+        "Comparing your farming with successful farmers in similar conditions to learn good practices.",
+        "Buying expensive new machinery to increase total crop production on your land.",
+        "Selling your harvested crops at the highest market price available in the district.",
+        "Calculating only your personal production costs without looking at other farms."
+      ],
+      "optionsMr": [
+        "तुमच्यासारख्याच परिस्थितीतील यशस्वी शेतकऱ्यांच्या शेतीची तुलना आपल्या शेतीशी करून चांगल्या पद्धती शिकणे.",
+        "तुमच्या जमिनीवरील एकूण पीक उत्पादन वाढवण्यासाठी महाग नवीन यंत्रसामग्री खरेदी करणे.",
+        "तुमचे काढणी केलेले पीक जिल्ह्यातील उपलब्ध सर्वोच्च बाजारभावाने विकणे.",
+        "इतर शेतांकडे न पाहता फक्त तुमचा वैयक्तिक उत्पादन खर्च मोजणे."
+      ],
+      "correctIndex": 0,
+      "explanationEn": "Benchmarking means learning from successful neighbours in similar conditions to improve your own results.",
+      "explanationMr": "बेंचमार्किंग म्हणजे स्वतःचे परिणाम सुधारण्यासाठी तशाच परिस्थितीतील यशस्वी शेजाऱ्यांकडून शिकणे.",
+      "source": "ai"
+    },
+    {
+      "position": 2,
+      "promptEn": "How does GramIQ identify benchmark farmers?",
+      "promptMr": "GramIQ बेंचमार्क शेतकरी कसे ओळखते?",
+      "optionsEn": [
+        "By analysing regular farm profit records of farmers in the district",
+        "By checking government agricultural subsidy lists for the region",
+        "By testing the soil quality of every farm in the district",
+        "By measuring the total land area owned by each household"
+      ],
+      "optionsMr": [
+        "जिल्ह्यातील शेतकऱ्यांच्या शेतीच्या नियमित नफ्याच्या नोंदी तपासून",
+        "या भागातील सरकारच्या कृषी अनुदानाच्या याद्या तपासून",
+        "जिल्ह्यातील प्रत्येक शेताच्या मातीचा दर्जा तपासून",
+        "प्रत्येक कुटुंबाकडे असलेल्या जमिनीचे एकूण क्षेत्रफळ मोजून"
+      ],
+      "correctIndex": 0,
+      "explanationEn": "GramIQ identifies top-performing benchmark farmers by analysing the regular farm profit records submitted by farmers.",
+      "explanationMr": "ग्रामआयक्यू (GramIQ) हे शेतकऱ्यांनी पाठवलेल्या शेतीच्या नियमित नफ्याच्या नोंदी तपासून सर्वोत्तम कामगिरी करणारे बेंचमार्क शेतकरी ओळखते.",
+      "source": "ai"
+    },
+    {
+      "position": 3,
+      "promptEn": "Name any three practices worth learning from benchmark farmers.",
+      "promptMr": "बेंचमार्क शेतकऱ्यांकडून शिकण्यासारख्या कोणत्याही तीन पद्धती सांगा.",
+      "optionsEn": [
+        "Fertiliser management, seed rate, and timely sowing",
+        "Tractor brand, soil testing lab, and credit source",
+        "Market price, storage type, and transport vehicle",
+        "Land size, family labor, and electricity subsidy"
+      ],
+      "optionsMr": [
+        "खतांचे व्यवस्थापन, बियाण्यांचे प्रमाण आणि वेळेवर पेरणी",
+        "ट्रॅक्टरची ब्रँड, माती परीक्षण प्रयोगशाळा आणि कर्जाचा स्रोत",
+        "बाजारभाव, साठवणुकीचा प्रकार आणि वाहतुकीचे साधन",
+        "जमिनीचा आकार, घरचे श्रम आणि वीज अनुदान"
+      ],
+      "correctIndex": 0,
+      "explanationEn": "Benchmark farmers do things differently in practices like fertiliser use, seed rate, and timely sowing.",
+      "explanationMr": "बंचमार्क शेतकरी खतांचा वापर, बियाण्यांचे प्रमाण आणि वेळेवर पेरणी यांसारख्या गोष्टींमध्ये वेगळ्या पद्धतीने काम करतात.",
+      "source": "ai"
+    }
+  ],
+  "errors": []
+}

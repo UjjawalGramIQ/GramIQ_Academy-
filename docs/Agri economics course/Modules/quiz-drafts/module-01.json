@@ -1,0 +1,72 @@
+{
+  "moduleNo": "01",
+  "moduleTitleEn": "Module 1 — Understanding MSP",
+  "moduleTitleMr": "मॉड्यूल 1 — MSP समजून घेणे",
+  "generatedAt": "2026-09-21T04:46:50.944Z",
+  "questions": [
+    {
+      "position": 1,
+      "promptEn": "What is MSP and by what formula is it fixed?",
+      "promptMr": "MSP म्हणजे काय आणि ती कोणत्या सूत्राने ठरवली जाते?",
+      "optionsEn": [
+        "MSP is the minimum price fixed by the government, calculated as 1.5 times (A2 + FL).",
+        "MSP is the minimum price fixed by the government, calculated as 1.5 times the C2 cost.",
+        "MSP is the minimum price fixed by the government, calculated as 2 times (A2 + FL).",
+        "MSP is the maximum price farmers can sell for, calculated as 1.5 times (A2 + FL)."
+      ],
+      "optionsMr": [
+        "MSP म्हणजे सरकारने ठरवलेली किमान किंमत, जी A2 + FL च्या १.५ पट असते.",
+        "MSP म्हणजे सरकारने ठरवलेली किमान किंमत, जी C2 खर्चाच्या १.५ पट असते.",
+        "MSP म्हणजे सरकारने ठरवलेली किमान किंमत, जी A2 + FL च्या २ पट असते.",
+        "MSP म्हणजे शेतकरी जास्तीत जास्त ज्या किमतीला विकू शकतात ती किंमत, जी A2 + FL च्या १.५ पट असते."
+      ],
+      "correctIndex": 0,
+      "explanationEn": "MSP is the minimum price the government guarantees, and it is calculated as 1.5 times the A2+FL cost.",
+      "explanationMr": "MSP म्हणजे सरकार शेतकऱ्यांना देण्याची हमी देते ती किमान किंमत, आणि ती A2 + FL खर्चाच्या १.५ पट मोजली जाते.",
+      "source": "ai"
+    },
+    {
+      "position": 2,
+      "promptEn": "Briefly explain the difference between A2, FL and C2.",
+      "promptMr": "A2, FL आणि C2 यांच्यातील फरक थोडक्यात स्पष्ट करा.",
+      "optionsEn": [
+        "A2 is cash costs, FL is family labour value, and C2 adds land and equipment costs as a benchmark.",
+        "A2 is family labour, FL is cash expenses, and C2 is the total market price.",
+        "A2, FL, and C2 are all different names for the same government subsidy payment.",
+        "A2 is the final MSP, FL is fertilizer cost, and C2 is the total crop yield."
+      ],
+      "optionsMr": [
+        "A2 हा रोख खर्च आहे, FL म्हणजे कुटुंबातील श्रमाचे मूल्य, आणि C2 मध्ये जमीन व उपकरणांचा खर्च जोडून एक मानक तयार केले जाते.",
+        "A2 हे कुटुंबातील श्रम आहे, FL हा रोख खर्च आहे, आणि C2 ही एकूण बाजारभाव किंमत आहे.",
+        "A2, FL आणि C2 ही सर्व शासकीय अनुदानाच्या पैशाचीच वेगवेगळी नावे आहेत.",
+        "A2 हा अंतिम एमएसपी (किमान आधारभूत किंमत) आहे, FL खताचा खर्च आहे, आणि C2 हे पिकाचे एकूण उत्पादन आहे."
+      ],
+      "correctIndex": 0,
+      "explanationEn": "A2 covers direct cash expenses, FL values family labour, and C2 adds land and equipment costs to serve as a full-cost benchmark.",
+      "explanationMr": "A2 मध्ये थेट रोख खर्च समाविष्ट असतो, FL मध्ये कुटुंबातील श्रमाचे मूल्य धरले जाते, आणि C2 मध्ये जमीन व साहित्याचा खर्च मिळवून एकूण खर्चाचा अंदाज लावला जातो.",
+      "source": "ai"
+    },
+    {
+      "position": 3,
+      "promptEn": "Why is it important to record the actual production cost of your own farming?",
+      "promptMr": "आपल्या स्वतःच्या शेतीचा प्रत्यक्ष उत्पादन खर्च नोंदवणे का महत्त्वाचे आहे?",
+      "optionsEn": [
+        "Because it is the most effective tool to demand a fair MSP based on actual costs.",
+        "Because the government uses your personal diary to calculate the national C2 benchmark.",
+        "Because banks require written records before approving any seasonal crop loan.",
+        "Because it determines the exact market price traders will pay at the local mandi."
+      ],
+      "optionsMr": [
+        "कारण प्रत्यक्ष खर्चावर आधारित योग्य हमीभाव (MSP) मागण्यासाठी हे सर्वात प्रभावी साधन आहे.",
+        "कारण राष्ट्रीय C2 निकष ठरवण्यासाठी सरकार तुमच्या वैयक्तिक डायरीचा वापर करते.",
+        "कारण कोणतेही हंगामी पीक कर्ज मंजूर करण्यापूर्वी बँकांना लिखित रेकॉर्डची गरज असते.",
+        "कारण यामुळे स्थानिक बाजारात (मंडीत) व्यापारी किती किंमत देतील हे ठरते."
+      ],
+      "correctIndex": 0,
+      "explanationEn": "Keeping accurate cost records gives you the proof needed to show the government if your actual farming expenses are higher than their estimates.",
+      "explanationMr": "खर्चाची अचूक नोंद ठेवल्यामुळे, तुमचा प्रत्यक्ष शेतीचा खर्च सरकारच्या अंदाजापेक्षा जास्त असल्यास, ते सरकारला दाखवण्यासाठी तुमच्याकडे पुरावा उपलब्ध राहतो.",
+      "source": "ai"
+    }
+  ],
+  "errors": []
+}

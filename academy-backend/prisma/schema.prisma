@@ -1,0 +1,291 @@
+// GramIQ Academy backend — Prisma schema
+//
+// Ported 1:1 from the Supabase SQL migrations in
+// "GramIQ Academy Handover v6/code/academy/database/migrations/", with two
+// deliberate departures now that Postgres is no longer Supabase:
+//   1. No Row Level Security / service-role grants — this backend is the only
+//      client of this database, so authorization moves entirely into Express
+//      middleware and route logic (the old code already treated RLS as
+//      defence-in-depth, not the enforcement point: see academyDb() in
+//      app/api/_handlers/v1/academy/_shared.ts).
+//   2. progress.user_id / progress_cursor.user_id referenced Supabase's
+//      auth.users(id) — that table doesn't exist here. Both now reference
+//      this schema's own User model directly, which also resolves the
+//      "account foreign-key mismatch" finding documented in
+//      docs/DATABASE_SCHEMA.md section 5.
+//
+// (course_id, position) and (module_id, position) were DEFERRABLE INITIALLY
+// DEFERRED unique constraints in Postgres so a reorder could swap positions
+// inside one statement. Prisma has no DEFERRABLE support, so reorder_modules
+// is reimplemented in the service layer using a transaction that first moves
+// affected rows to negative/offset positions, then to their final positions
+// (see src/lib/academy/reorder.ts) instead of relying on a deferred check.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Course content spine
+// ---------------------------------------------------------------------------
+
+model Course {
+  id               String   @id @default(uuid()) @db.Uuid
+  slug             String   @unique
+  title            Json
+  subtitle         Json?
+  heroBullets      Json?    @map("hero_bullets")
+  heroImageUrl     String?  @map("hero_image_url")
+  defaultLang      Lang     @default(mr) @map("default_lang")
+  estimatedMinutes Int?     @map("estimated_minutes")
+  isPublished      Boolean  @default(false) @map("is_published")
+  createdAt        DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt        DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  modules         Module[]
+  progress        Progress[]
+  progressCursors ProgressCursor[]
+
+  @@map("courses")
+}
+
+enum ModuleStatus {
+  draft
+  published
+  archived
+
+  @@map("module_status")
+}
+
+model Module {
+  id           String       @id @default(uuid()) @db.Uuid
+  courseId     String       @map("course_id") @db.Uuid
+  position     Int
+  status       ModuleStatus @default(draft)
+  title        Json
+  introBlocks  Json?        @map("intro_blocks")
+  outroBlocks  Json?        @map("outro_blocks")
+  source       Json         @default("{}")
+  parseReport  Json?        @map("parse_report")
+  sectionCount Int          @default(0) @map("section_count")
+  publishedAt  DateTime?    @map("published_at") @db.Timestamptz
+  createdAt    DateTime     @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt    DateTime     @updatedAt @map("updated_at") @db.Timestamptz
+
+  course          Course           @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  sections        Section[]
+  questions       Question[]
+  progress        Progress[]
+  progressCursors ProgressCursor[]
+
+  @@unique([courseId, position], map: "uq_academy_modules_position")
+  @@map("modules")
+}
+
+model Section {
+  id        String   @id @default(uuid()) @db.Uuid
+  moduleId  String   @map("module_id") @db.Uuid
+  position  Int
+  displayNo String   @map("display_no")
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz
+
+  module          Module           @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  content         SectionContent[]
+  progress        Progress[]
+  progressCursors ProgressCursor[]
+
+  @@unique([moduleId, position], map: "uq_academy_sections_position")
+  @@map("sections")
+}
+
+enum Lang {
+  mr
+  en
+
+  @@map("lang")
+}
+
+model SectionContent {
+  sectionId String @map("section_id") @db.Uuid
+  lang      Lang
+  title     String
+  blocks    Json
+
+  section Section @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+
+  @@id([sectionId, lang])
+  @@map("section_content")
+}
+
+enum QuestionSource {
+  ai
+  admin
+
+  @@map("question_source")
+}
+
+model Question {
+  id           String         @id @default(uuid()) @db.Uuid
+  moduleId     String         @map("module_id") @db.Uuid
+  position     Int
+  correctIndex Int            @map("correct_index") @db.SmallInt
+  source       QuestionSource @default(ai)
+  createdAt    DateTime       @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt    DateTime       @updatedAt @map("updated_at") @db.Timestamptz
+
+  module  Module            @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  content QuestionContent[]
+
+  @@unique([moduleId, position], map: "uq_academy_questions_position")
+  @@map("questions")
+}
+
+model QuestionContent {
+  questionId  String   @map("question_id") @db.Uuid
+  lang        Lang
+  prompt      String
+  options     String[]
+  explanation String?
+
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@id([questionId, lang])
+  @@map("question_content")
+}
+
+// ---------------------------------------------------------------------------
+// Identity
+// ---------------------------------------------------------------------------
+
+enum UserRole {
+  learner
+  admin
+
+  @@map("user_role")
+}
+
+model User {
+  id                                   String   @id @default(uuid()) @db.Uuid
+  email                                String?  @unique
+  phone                                String?  @unique
+  passwordHash                         String   @map("password_hash")
+  displayName                          String?  @map("display_name")
+  role                                 UserRole @default(learner)
+  isDemo                               Boolean  @default(false) @map("is_demo")
+  collegeName                          String?  @map("college_name")
+  communityEngagementInternshipCredits Decimal? @map("community_engagement_internship_credits")
+  createdAt                            DateTime @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt                            DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  progress        Progress[]
+  progressCursors ProgressCursor[]
+  streaks         Streak[]
+  certificates    Certificate[]
+
+  @@index([role], map: "idx_academy_users_role")
+  @@map("users")
+}
+
+// ---------------------------------------------------------------------------
+// Progress
+// ---------------------------------------------------------------------------
+
+enum ProgressKind {
+  section
+  quiz
+
+  @@map("progress_kind")
+}
+
+enum ProgressStatus {
+  in_progress
+  completed
+
+  @@map("progress_status")
+}
+
+model Progress {
+  id               String         @id @default(uuid()) @db.Uuid
+  deviceId         String         @map("device_id")
+  userId           String?        @map("user_id") @db.Uuid
+  courseId         String         @map("course_id") @db.Uuid
+  sectionId        String?        @map("section_id") @db.Uuid
+  moduleId         String?        @map("module_id") @db.Uuid
+  kind             ProgressKind   @default(section)
+  status           ProgressStatus @default(in_progress)
+  answers          Int[]
+  score            Int?           @db.SmallInt
+  timeSpentSeconds Int?           @map("time_spent_seconds")
+  completedAt      DateTime?      @map("completed_at") @db.Timestamptz
+  createdAt        DateTime       @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt        DateTime       @updatedAt @map("updated_at") @db.Timestamptz
+
+  user    User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  course  Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  section Section? @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+  module  Module?  @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+
+  @@unique([deviceId, sectionId], map: "uq_academy_progress_section")
+  @@unique([deviceId, moduleId, kind], map: "uq_academy_progress_module_quiz")
+  @@map("progress")
+}
+
+model ProgressCursor {
+  deviceId  String   @id @map("device_id")
+  userId    String?  @map("user_id") @db.Uuid
+  courseId  String?  @map("course_id") @db.Uuid
+  moduleId  String?  @map("module_id") @db.Uuid
+  sectionId String?  @map("section_id") @db.Uuid
+  lang      Lang     @default(mr)
+  updatedAt DateTime @updatedAt @map("updated_at") @db.Timestamptz
+
+  user    User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  course  Course?  @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  module  Module?  @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  section Section? @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+
+  @@map("progress_cursor")
+}
+
+// ---------------------------------------------------------------------------
+// Streaks + certificates
+// ---------------------------------------------------------------------------
+
+model Streak {
+  id         String   @id @default(uuid()) @db.Uuid
+  userId     String?  @map("user_id") @db.Uuid
+  deviceId   String?  @map("device_id")
+  streakDate DateTime @map("streak_date") @db.Date
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz
+
+  user User? @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, streakDate], map: "uq_academy_streaks_user")
+  @@unique([deviceId, streakDate], map: "uq_academy_streaks_device")
+  @@index([streakDate], map: "idx_academy_streaks_date")
+  @@map("streaks")
+}
+
+model Certificate {
+  id             String   @id @default(uuid()) @db.Uuid
+  userId         String?  @map("user_id") @db.Uuid
+  deviceId       String?  @map("device_id")
+  courseSlug     String   @map("course_slug")
+  learnerName    String   @map("learner_name")
+  score          Int      @default(0)
+  totalQuestions Int      @default(0) @map("total_questions")
+  hmacSignature  String   @map("hmac_signature")
+  metadata       Json     @default("{}")
+  issuedAt       DateTime @default(now()) @map("issued_at") @db.Timestamptz
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([deviceId], map: "idx_academy_certificates_device_id")
+  @@index([courseSlug], map: "idx_academy_certificates_course_slug")
+  @@map("certificates")
+}

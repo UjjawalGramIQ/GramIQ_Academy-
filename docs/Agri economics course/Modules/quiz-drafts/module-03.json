@@ -1,0 +1,72 @@
+{
+  "moduleNo": "03",
+  "moduleTitleEn": "Module 3 — Economic Optimum in Farming",
+  "moduleTitleMr": "मॉड्यूल 3 — शेतीतील आर्थिक इष्टतम (Economic Optimum)",
+  "generatedAt": "2026-09-21T04:47:44.117Z",
+  "questions": [
+    {
+      "position": 1,
+      "promptEn": "What is economic optimum? Explain on the basis of the cow example.",
+      "promptMr": "आर्थिक इष्टतम म्हणजे काय, गायीच्या उदाहरणाच्या आधारे स्पष्ट करा.",
+      "optionsEn": [
+        "The point where maximum total output is achieved from the least amount of feed.",
+        "The point where additional feed no longer increases milk, giving the best profit.",
+        "The point where feeding the cow extra fodder continuously increases milk production.",
+        "The point where milk yield stops completely due to excess feed."
+      ],
+      "optionsMr": [
+        "तिथे कमीत कमी खाद्यात जास्तीत जास्त दूध मिळते.",
+        "तिथे जास्तीचे खाद्य खाल्ल्याने दुधात वाढ होत नाही, पण सगळ्यात जास्त नफा मिळतो.",
+        "तिथे गायीला जास्तीचा चारा घातल्याने दूध सतत वाढतच राहते.",
+        "तिथे जास्त खाद्यामुळे दूध पूर्णपणे बंद होते."
+      ],
+      "correctIndex": 1,
+      "explanationEn": "Economic optimum is where extra cost equals extra benefit, like when extra fodder stops raising milk profit.",
+      "explanationMr": "आर्थिक इष्टतम (इकोनॉमिक ऑप्टिमम) म्हणजे असा बिंदू जिथे अतिरिक्त खर्च आणि अतिरिक्त फायदा बरोबर होतात, जसे की जास्त चारा घातल्याने मिळणारा नफा वाढायचा थांबतो.",
+      "source": "ai"
+    },
+    {
+      "position": 2,
+      "promptEn": "Why can profit fall even after using more fertiliser?",
+      "promptMr": "जास्त खत वापरूनही नफा का कमी होऊ शकतो?",
+      "optionsEn": [
+        "Because the cost of extra fertiliser becomes more than the value of extra crop produced.",
+        "Because extra fertiliser always ruins the soil quality and destroys the crop completely.",
+        "Because the market price of fertiliser drops when you buy more bags for your farm.",
+        "Because using more fertiliser makes the crop grow too fast for the weather."
+      ],
+      "optionsMr": [
+        "कारण जास्त खताचा खर्च, त्यामुळे वाढलेल्या पिकाच्या किंमतीपेक्षा जास्त होतो.",
+        "कारण जास्त खतामुळे नेहमी माती खराब होते आणि पीक पूर्णपणे नष्ट होते.",
+        "कारण जेव्हा तुम्ही शेतात जास्त गोण्या खरेदी करता तेव्हा खताचा बाजारभाव कमी होतो.",
+        "कारण जास्त खत वापरल्यामुळे हवामानानुसार पीक खूप वेगाने वाढते."
+      ],
+      "correctIndex": 0,
+      "explanationEn": "Profit falls when the extra cost of more fertiliser is greater than the value of the extra crop you get.",
+      "explanationMr": "जेव्हा जास्त खत वापरल्याचा अतिरिक्त खर्च, त्यामुळे मिळणाऱ्या अतिरिक्त पिकाच्या मूल्यापेक्षा जास्त होतो, तेव्हा नफा कमी होतो.",
+      "source": "ai"
+    },
+    {
+      "position": 3,
+      "promptEn": "What are the four steps to find the economic optimum for your own farm?",
+      "promptMr": "स्वतःच्या शेतासाठी आर्थिक इष्टतम शोधण्याचे चार टप्पे कोणते?",
+      "optionsEn": [
+        "Record, Compare, Find the optimum, Increase profit",
+        "Buy, Apply, Measure, Sell",
+        "Test soil, Add fertiliser, Wait, Harvest",
+        "Guess, Spend, Check yield, Repeat"
+      ],
+      "optionsMr": [
+        "नोंद ठेवा, तुलना करा, योग्य प्रमाण शोधा, नफा वाढवा",
+        "खरेदी करा, वापर करा, मोजा, विक्री करा",
+        "मातीची तपासणी करा, खत टाका, वाट पहा, काढणी करा",
+        "अंदाज लावा, खर्च करा, उत्पादन तपासा, पुन्हा करा"
+      ],
+      "correctIndex": 0,
+      "explanationEn": "Keeping records, comparing them, finding the optimum, and increasing profit are the four simple steps to find your farm's economic optimum.",
+      "explanationMr": "तुमच्या शेतासाठी आर्थिकदृष्ट्या योग्य प्रमाण शोधण्याच्या या चार सोप्या पायऱ्या आहेत: नोंदी ठेवणे, त्यांची तुलना करणे, योग्य प्रमाण शोधणे आणि नफा वाढवणे.",
+      "source": "ai"
+    }
+  ],
+  "errors": []
+}

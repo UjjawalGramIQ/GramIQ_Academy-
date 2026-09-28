@@ -1,0 +1,72 @@
+{
+  "moduleNo": "02",
+  "moduleTitleEn": "Module 2 — Opportunity Cost in Farming",
+  "moduleTitleMr": "मॉड्यूल 2 — शेतीतील संधी खर्च (Opportunity Cost)",
+  "generatedAt": "2026-09-21T04:47:29.854Z",
+  "questions": [
+    {
+      "position": 1,
+      "promptEn": "Explain opportunity cost in your own words, with an example.",
+      "promptMr": "संधी खर्च म्हणजे काय, स्वतःच्या शब्दांत उदाहरणासह स्पष्ट करा.",
+      "optionsEn": [
+        "The benefit from the next best choice you gave up when making a decision.",
+        "The total money spent on growing a crop, including all labour and material costs.",
+        "The profit earned from selling your farm produce after all expenses are paid.",
+        "The risk of losing money due to crop failure or unexpected market price changes."
+      ],
+      "optionsMr": [
+        "एखादा निर्णय घेताना, तुम्ही सोडलेल्या दुसऱ्या सर्वोत्तम पर्यायापासून मिळणारा फायदा.",
+        "शेतात पीक घेण्यासाठी लागणारा सर्व श्रम आणि साहित्याचा खर्च धरून एकूण झालेला खर्च.",
+        "सर्व खर्च वजा केल्यानंतर शेतमाल विकून मिळालेला नफा.",
+        "पीक गेल्यामुळे किंवा बाजारात अचानक भाव बदलल्यामुळे पैसे बुडण्याचा धोका."
+      ],
+      "correctIndex": 0,
+      "explanationEn": "Opportunity cost is the benefit you could have received from the best alternative option you chose not to pursue.",
+      "explanationMr": "संधी खर्च म्हणजे ज्या चांगल्या पर्यायाची आपण निवड केली नाही, त्या पर्यायापासून आपल्याला जो फायदा मिळाला असता, तो फायदा.",
+      "source": "ai"
+    },
+    {
+      "position": 2,
+      "promptEn": "How would you work out the opportunity cost of a crop, taking labour and land rent into account?",
+      "promptMr": "मजुरी व जमीन भाड्याचा विचार करून एका पिकाचा संधी खर्च कसा काढाल?",
+      "optionsEn": [
+        "Add up total seed and fertilizer costs.",
+        "Subtract actual farm profit from what could have been earned elsewhere.",
+        "Multiply daily wages by the total days in a season.",
+        "Subtract land rent from the market price of the crop."
+      ],
+      "optionsMr": [
+        "एकूण बियाणे आणि खताचा खर्च एकत्र करा.",
+        "इतर ठिकाणी कमावता आले असते त्यातून शेतीत झालेला खरा नफा वजा करा.",
+        "रोजच्या मजुरीला एका हंगामातील एकूण दिवसांनी गुणा.",
+        "पिकाच्या बाजारातील किमतीतून जमिनीचे भाडे वजा करा."
+      ],
+      "correctIndex": 1,
+      "explanationEn": "Opportunity cost is calculated by taking what you could have earned elsewhere and subtracting what you actually earned.",
+      "explanationMr": "संधी खर्च काढण्यासाठी, तुम्ही इतर ठिकाणी काम करून जे पैसे कमावले असते, त्यातून तुम्हाला प्रत्यक्षात मिळालेले पैसे वजा करावे",
+      "source": "ai"
+    },
+    {
+      "position": 3,
+      "promptEn": "What lesson do we learn from the onion storage example?",
+      "promptMr": "कांद्याच्या साठवणुकीच्या उदाहरणातून आपण कोणता धडा शिकतो?",
+      "optionsEn": [
+        "One should always store onions for four months to get a higher price.",
+        "Storage loss, handling costs, and price uncertainty must be considered before storing.",
+        "Selling produce today always yields less money than storing it.",
+        "Onion storage never results in any spoilage if managed properly."
+      ],
+      "optionsMr": [
+        "जास्त किंमत मिळवण्यासाठी कांदा नेहमी चार महिने साठवून ठेवला पाहिजे.",
+        "कांदा साठवण्यापूर्वी साठवणुकीतील नुकसान, हाताळणीचा खर्च आणि बाजारातील अनिश्चितता यांचा विचार केलाच पाहिजे.",
+        "आज माल विकण्यापेक्षा तो साठवून ठेवल्यास नेहमीच जास्त पैसे मिळतात.",
+        "योग्य व्यवस्थापन केल्यास कांदा साठवणुकीत कधीही खराब होत नाही."
+      ],
+      "correctIndex": 1,
+      "explanationEn": "The onion example shows we must look at storage losses, costs, and price risks, not just the market price.",
+      "explanationMr": "कांद्याच्या उदाहरणावरून आपल्याला हे समजते की, केवळ बाजारातील किंमत पाहण्याऐवजी साठवणुकीतील नुकसान, खर्च आणि किंमतीतील जोखीम यांचा विचार करणे आवश्यक आहे.",
+      "source": "ai"
+    }
+  ],
+  "errors": []
+}

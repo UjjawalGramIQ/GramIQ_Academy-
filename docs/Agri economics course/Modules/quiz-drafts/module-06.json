@@ -1,0 +1,72 @@
+{
+  "moduleNo": "06",
+  "moduleTitleEn": "Module 6 — How to Keep Farm Accounts in the A2 Format",
+  "moduleTitleMr": "मॉड्यूल 6 — A2 फॉरमॅटनुसार शेती हिशेब कसा ठेवावा",
+  "generatedAt": "2026-09-21T04:48:25.803Z",
+  "questions": [
+    {
+      "position": 1,
+      "promptEn": "Which costs have to be recorded under the A2 format?",
+      "promptMr": "A2 फॉरमॅटनुसार कोणकोणत्या खर्चांची नोंद ठेवावी लागते?",
+      "optionsEn": [
+        "All actual cash and kind costs incurred by the farmer for the crop",
+        "Only long-term land investments and family labour values",
+        "Government subsidies and insurance payouts received during the season",
+        "Estimated future market prices of seeds and fertilizers"
+      ],
+      "optionsMr": [
+        "शेतकऱ्याने पिकासाठी रोख आणि वस्तुरूपात केलेले सर्व प्रत्यक्ष खर्च",
+        "फक्त दीर्घकालीन जमिनीवरील गुंतवणूक आणि कुटुंबातील मजुरीचे मूल्य",
+        "हंगामात मिळालेले सरकारी अनुदान आणि विमा रक्कम",
+        "बियाणे आणि खतांच्या भविष्यातील अंदाजित बाजारकिमती"
+      ],
+      "correctIndex": 0,
+      "explanationEn": "The A2 format tracks all actual costs paid in cash or kind for producing the crop.",
+      "explanationMr": "A2 फॉरमॅटमध्ये पिकाच्या उत्पादनासाठी रोख किंवा वस्तुरूपात केलेल्या सर्व प्रत्यक्ष खर्चाची नोंद ठेवली जाते.",
+      "source": "ai"
+    },
+    {
+      "position": 2,
+      "promptEn": "How is net profit worked out?",
+      "promptMr": "निव्वळ नफा कसा काढला जातो?",
+      "optionsEn": [
+        "Total income minus total cost (A2)",
+        "Total cost minus total output",
+        "Total income plus government subsidies",
+        "Total output minus total sales"
+      ],
+      "optionsMr": [
+        "एकूण उत्पन्नातून एकूण खर्च वजा करून",
+        "एकूण खर्चातून एकूण उत्पादन वजा करून",
+        "एकूण उत्पन्नात सरकारी अनुदान मिळवून",
+        "एकूण उत्पादनातून एकूण विक्री वजा करून"
+      ],
+      "correctIndex": 0,
+      "explanationEn": "Net profit is found by subtracting your total cost from your total income.",
+      "explanationMr": "एकूण उत्पन्नातून एकूण खर्च वजा केल्यावर आपल्याला निव्वळ नफा मिळतो.",
+      "source": "ai"
+    },
+    {
+      "position": 3,
+      "promptEn": "What are the benefits of keeping accounts digitally instead of in a paper ledger?",
+      "promptMr": "कागदी वहीऐवजी डिजिटल पद्धतीने हिशेब ठेवण्याचे फायदे कोणते?",
+      "optionsEn": [
+        "Digital records are safer and more easily available than paper ledgers.",
+        "Digital records double the government MSP payout automatically.",
+        "Digital records eliminate all farm labour and fertiliser expenses.",
+        "Digital records remove the need to ever record crop output."
+      ],
+      "optionsMr": [
+        "डिजिटल रेकॉर्ड कागदी वह्यांपेक्षा जास्त सुरक्षित आणि सहज उपलब्ध असतात.",
+        "डिजिटल रेकॉर्डमुळे सरकारी हमीभाव (MSP) चे पैसे आपोआप दुप्पट होतात.",
+        "डिजिटल रेकॉर्डमुळे शेतातील मजुरी आणि खतांचा सर्व खर्च पूर्णपणे बंद होतो.",
+        "डिजिटल रेकॉर्डमुळे पिकाच्या उत्पादनाची नोंद करण्याची गरजच उरत नाही."
+      ],
+      "correctIndex": 0,
+      "explanationEn": "Using a mobile app makes your farm records safer and easier to access than paper.",
+      "explanationMr": "मोबाइल अ‍ॅप वापरल्यामुळे कागदाच्या तुलनेत तुमचे शेतीचे रेकॉर्ड्स अधिक सुरक्षित राहतात आणि केव्हाही सहज पाहता येतात.",
+      "source": "ai"
+    }
+  ],
+  "errors": []
+}
